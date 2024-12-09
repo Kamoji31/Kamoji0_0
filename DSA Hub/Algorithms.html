@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DSAHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="CSS/Algorithms.css">
+  </head> 
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="DSAHub.html">
+          <img src="Images/DSAHub Logo.png" alt="" width="150" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="DSAHub.html">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#Courses" role="button" aria-expanded="false">COURSES</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Algorithms.html">Algorithms</a></li>
+                <li><a class="dropdown-item" href="Pseudocode.html">Pseudocode</a></li>
+                <li><a class="dropdown-item" href="Array.html">Array</a></li>
+                <li><a class="dropdown-item" href="Linked List.html">Linked List</a></li>
+                <li><a class="dropdown-item" href="Stacks.html">Stacks</a></li>
+                <li><a class="dropdown-item" href="Queues.html">Queues</a></li>
+                <li><a class="dropdown-item" href="Trees.html">Trees</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Team Members.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <section id="Algorithms" class="py-5" style="padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+      <div class="container">
+          <h2 class="text-left fw-bold" style="color: #333; margin-bottom: 1.5%;">Algorithms</h2>
+          <div class="container d-flex justify-content-between mt-1 mb-4">
+            <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='DSAHub.html'">Previous</button>
+            <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Pseudocode.html'">Next</button>
+        </div>
+          <p class="text-justify" style="color: #333; line-height: 2em; background-color: #a1d3ff; padding: 2%; border-radius: 8px;">An algorithm is a step-by-step procedure or formula for solving a problem. Algorithms are essential in computer science and programming, as they provide a clear sequence of instructions that can be followed to achieve a specific goal.</p>
+          
+          <h4 class="fw-bold" style="color: #333; margin-top: 1.5em;">Importance of Algorithms</h4>
+          <p style="color: #555;">Algorithms are crucial for several reasons:</p>
+          <ul style="color: #555; line-height: 2em;">
+              <li><strong>Efficiency:</strong> Well-designed algorithms can significantly reduce the time and resources needed to solve problems.</li>
+              <li><strong>Scalability:</strong> Algorithms can be scaled to handle larger datasets or more complex problems.</li>
+              <li><strong>Reusability:</strong> Algorithms can be reused in different programs or applications, saving time in development.</li>
+              <li><strong>Problem Solving:</strong> They provide a structured approach to problem-solving, making it easier to understand and implement solutions.</li>
+          </ul>
+      
+          <h4 class="fw-bold" style="color: #333; margin-top: 1em;">Common Types of Algorithms</h4>
+          <ul style="color: #555; line-height: 2em;">
+              <li><strong>Sorting Algorithms:</strong> Such as Quick Sort, Merge Sort, and Bubble Sort, which arrange data in a particular order.</li>
+              <li><strong>Search Algorithms:</strong> Such as Binary Search and Linear Search, which are used to find specific data within a dataset.</li>
+              <li><strong>Graph Algorithms:</strong> Such as Dijkstra's and A* algorithms, which are used for finding the shortest path in graphs.</li>
+              <li><strong>Dynamic Programming:</strong> A method for solving complex problems by breaking them down into simpler subproblems.</li>
+          </ul>
+
+          <h4 class="fw-bold mb-3" style="color: #333; margin-top: 1em;">Creating an Algorithm</h4>
+          <p class="mb-3">
+              Since the algorithm is language-independent, we write the steps to demonstrate the logic behind the solution to be used for solving a problem. But before writing an algorithm, keep the following points in mind:
+          </p>
+          <ul class="list-disc list-inside mb-3" style="line-height: 2em;">
+              <li>The algorithm should be clear and unambiguous.</li>
+              <li>There should be 0 or more well-defined inputs in an algorithm.</li>
+              <li>An algorithm must produce one or more well-defined outputs that are equivalent to the desired output. After a specific number of steps, algorithms must ground to a halt.</li>
+              <li>Algorithms must stop or end after a finite number of steps.</li>
+              <li>In an algorithm, step-by-step instructions should be supplied, and they should be independent of any computer code.</li>
+          </ul>
+          <p class="mb-4" style="font-size: 120%;"><span class="fw-bold">Example 1:</span> Algorithm to multiply 2 numbers and print the result:</p>
+          <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; border-radius: 8px;">
+              <p class="mb-2"><span class="fw-bold">Step 1:</span> Start</p>
+              <p class="mb-2"><span class="fw-bold">Step 2:</span> Get the knowledge of input. Here we need 3 variables; a and b will be the user input, and c will hold the result.</p>
+              <p class="mb-2"><span class="fw-bold">Step 3:</span> Declare variables a, b, and c.</p>
+              <p class="mb-2"><span class="fw-bold">Step 4:</span> Take input for a and b variables from the user.</p>
+              <p class="mb-2"><span class="fw-bold">Step 5:</span> Multiply a and b, and assign the result to c.</p>
+              <p class="mb-2"><span class="fw-bold">Step 6:</span> Output the result stored in c.</p>
+              <p class="mb-2"><span class="fw-bold">Step 7:</span> End</p>
+          </div>
+
+          <p class="mb-4" style="font-size: 120%; margin-top: 2%;"><span class="fw-bold">Example 2:</span> Algorithm to find the maximum of two numbers:</p>
+          <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; border-radius: 8px;">
+    <p class="mb-2"><span class="fw-bold">Step 1:</span> Start</p>
+    <p class="mb-2"><span class="fw-bold">Step 2:</span> Declare variables a, b, and max.</p>
+    <p class="mb-2"><span class="fw-bold">Step 3:</span> Take input for a and b from the user.</p>
+    <p class="mb-2"><span class="fw-bold">Step 4:</span> If a > b, then set max = a.</p>
+    <p class="mb-2"><span class="fw-bold">Step 5:</span> Else set max = b.</p>
+    <p class="mb-2"><span class="fw-bold">Step 6:</span> Output the value of max.</p>
+    <p class="mb-2"><span class="fw-bold">Step 7:</span> End</p>
+</div>
+
+<p class="mb-4" style="font-size: 120%; margin-top: 2%;"><span class="fw-bold">Example 3:</span> Algorithm to calculate the factorial of a number:</p>
+<div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; border-radius: 8px;">
+    <p class="mb-2"><span class="fw-bold">Step 1:</span> Start</p>
+    <p class="mb-2"><span class="fw-bold">Step 2:</span> Declare variable n and factorial.</p>
+    <p class="mb-2"><span class="fw-bold">Step 3:</span> Take input for n from the user.</p>
+    <p class="mb-2"><span class="fw-bold">Step 4:</span> Set factorial = 1.</p>
+    <p class="mb-2"><span class="fw-bold">Step 5:</span> For i from 1 to n, multiply factorial by i.</p>
+    <p class="mb-2"><span class="fw-bold">Step 6:</span> Output the value of factorial.</p>
+    <p class="mb-2"><span class="fw-bold">Step 7:</span> End</p>
+</div>
+
+<p class="mb-4" style="font-size: 120%; margin-top: 2%;"><span class="fw-bold">Example 4:</span> Algorithm to check if a number is prime:</p>
+<div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; border-radius: 8px;">
+    <p class="mb-2"><span class="fw-bold">Step 1:</span> Start</p>
+    <p class="mb-2"><span class="fw-bold">Step 2:</span> Declare variable n and isPrime.</p>
+    <p class="mb-2"><span class="fw-bold">Step 3:</span> Take input for n from the user.</p>
+    <p class="mb-2"><span class="fw-bold">Step 4:</span> Set isPrime = true.</p>
+    <p class="mb-2"><span class="fw-bold">Step 5:</span> For i from 2 to sqrt(n), if n % i == 0, set isPrime = false.</p>
+    <p class="mb-2"><span class="fw-bold">Step 6:</span> If isPrime is true, output "n is prime"; else output "n is not prime."</p>
+    <p class="mb-2"><span class="fw-bold">Step 7:</span> End</p>
+</div>
+
+<p class="mb-4" style="font-size: 120%; margin-top: 2%;"><span class="fw-bold">Example 5:</span> Algorithm to reverse a string:</p>
+<div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; border-radius: 8px;">
+    <p class="mb-2"><span class="fw-bold">Step 1:</span> Start</p>
+    <p class="mb-2"><span class="fw-bold">Step 2:</span> Declare variable str and reversedStr.</p>
+    <p class="mb-2"><span class="fw-bold">Step 3:</span> Take input for str from the user.</p>
+    <p class="mb-2"><span class="fw-bold">Step 4:</span> Set  
+    </div>
+
+    <div class="container d-flex justify-content-between mt-5">
+      <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='DSAHub.html'">Previous</button>
+      <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Pseudocode.html'">Next</button>
+  </div>
+  </section>
+
+<footer class="bg-light text-dark pt-5"  id="Contact">
+  <div class="container px-5">
+      <div class="row">
+          <div class="col-6 col-lg-4">
+              <h3 class="fw-bold">DSA Hub</h3>
+              <p class="pt-2">321, McArthur Highway, Binalonan,
+                <br>Pangasinan</p>
+              <p class="mb-2">09096453661</p>
+              <p>09273345635</p>
+          </div>
+          <div class="col">
+              <h4>Menu</h4>
+              <ul class="list-unstyled pt-2">
+                <li class="py-1"><a href="DSAHub.html">Home</a></li>
+                <li class="py-1"><a href="DSAHub.html">Courses</a></li>
+                <li class="py-1"><a href="Team Members.html">About Us</a></li>
+              </ul>
+          </div>
+          <div class="col">
+            <h4>Courses</h4>
+            <ul class="list-unstyled pt-2">
+                <li class="py-1"><a href="Algorithms.html">Algorithms</a></li>
+                <li class="py-1"><a href="Pseudocode.html">Pseudocode</a></li>
+                <li class="py-1"><a href="Array.html">Array</a></li>
+                <li class="py-1"><a href="Linked List.html">Linked List</a></li>
+                <li class="py-1"><a href="Stacks.html">Stacks</a></li>
+                <li class="py-1"><a href="Queues.html">Queues</a></li>
+                <li class="py-1"><a href="Trees.html">Trees</a></li>
+            </ul>
+        </div>
+          <div class="col-6 col-lg-3 text-lg-end">
+              <h4>Social Media Links</h4>
+              <div class="social-media pt-2">
+                  <a href="#" class="text-dark fs-2 me-3"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#" class="text-dark fs-2 me-3"><i class="fa-brands fa-pinterest"></i></a>
+                  <a href="#" class="text-dark fs-2 me-3"><i class="fa-brands fa-square-instagram"></i></a>
+                  <a href="#" class="text-dark fs-2"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+          </div>
+      </div>
+      <hr>
+      <div class="d-sm-flex justify-content-between py-1">
+          <p>2024 © DSAHub. All Rights Reserved. </p>
+          <p>
+              <a href="#" class="text-dark text-decoration-none pe-4">Terms of use</a>
+              <a href="#" class="text-dark text-decoration-none"> Privacy policy</a>
+          </p>
+      </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

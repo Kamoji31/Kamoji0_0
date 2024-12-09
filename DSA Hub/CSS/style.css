@@ -1,0 +1,214 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.nav-tabs .nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.navbar{
+    box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-nav, .nav-link{
+    font-weight: 700;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
+}
+
+.nav-link:hover{
+    color: #024ec8;
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+
+#Home {
+  background: url(../Images/Home.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  width: 100%; 
+  height: 50vh; 
+}
+
+#Home h2{
+    font-weight: 700;
+    font-size: 50px;
+}
+
+
+#Home h1{
+    font-weight: 700;
+    font-size: 76px;
+    color: #f0b60b;
+}
+
+#Home h4{
+  padding-top: 13px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  
+}
+
+.btn{
+    margin-top: 1%;
+    width: 250px; 
+    height: 48px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 4%;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+}
+
+
+.Courses h1{
+    margin-top: 7%;
+    margin-bottom: 4%;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.Courses h5{
+    font-size: 25px;
+    margin-bottom: 8%;
+}
+
+.Courses .card {
+  background-color: #f8f9fa; /* Set background color to light blue */
+  align-items: center;
+  flex-direction: row;
+}
+
+.Courses .card img {
+  max-width: 24%;  
+  margin-left: 6%;
+}
+
+.Courses .btn{
+    background-color: #1a72ef;
+    width: 170px; 
+    margin-bottom: 8%;
+  }
+
+.Courses .btn:active {
+    background-color: #1a72ef; 
+    color: #ffffff;
+}
+
+
+.Courses .card {
+    border: 3px solid #438af0; /* Set border color to blue */
+    background-color: #f8f9fa; /* Set background color to light blue */
+    align-items: center;
+    flex-direction: row;
+    color: black;
+}
+
+.Courses .card-body{
+    padding-left: 8%;
+    font-weight: 500;
+}
+
+
+
+.Categories .btn{
+    margin-top: 1%;
+    width: 200px; 
+    height: 48px;
+    font-size: 23px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+}
+
+    .About{
+      margin-top: 6%;
+      background-color: #a7cdfc;
+      color: black;
+      margin-bottom: 4%;
+    }
+
+    .About p{
+      word-spacing: 30%;
+      line-height: 30px;
+      font-size: large;
+    }
+
+    
+  .About .btn{
+    border-radius: 12vh;
+    color:rgb(12, 12, 12);
+    background-color: #ffffff;
+    border-color: #f8f9fa;
+   
+  
+}
+
+.About .btn:active {
+    
+    background-color: white; 
+    border-color: #024ec8;
+}
+
+    @media screen and (min-width: 768px) {
+      .about-us {
+        width: 70%;
+      }
+    }
+
+    .col a {
+      text-decoration: none; 
+      color: black;
+  }
+
+  
+  .col a:hover {
+      color: darkgray; 
+  }
+
+
+.btn-responsive {
+    width: 100%; 
+    font-size: 20px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-responsive:hover {
+    color: white; 
+    background-color: #007bff; 
+  }
+  
+  @media (max-width: 768px) {
+    .btn-responsive {
+      width: 100%; 
+      font-size: 18px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .btn-responsive {
+      width: auto; 
+    }
+  }
+  

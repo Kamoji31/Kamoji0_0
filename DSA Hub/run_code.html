@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Runner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2b005b; /* Dark purple background */
+            color: white;
+        }
+
+        h1 {
+            text-align: right;
+            margin-right: 20px;
+            margin-top: 10px;
+            font-size: 24px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button.run {
+            background-color: #28a745; /* Green button */
+            color: white;
+        }
+
+        button.clear {
+            background-color: #dc3545; /* Red button */
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .editor {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            gap: 20px;
+        }
+
+        textarea {
+            width: 40px; /* Set width to 400px */
+            height: 600px; /* Set height to 400px */
+            flex: 1;
+            background-color: rgba(112, 78, 174, 0.7); /* Light purple */
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            resize: none;
+            box-sizing: border-box;
+        }
+
+        .output {
+            width: 400px; /* Set width to 400px */
+            height: 600px; /* Set height to 400px */
+            flex: 1;
+            background-color: rgba(80, 50, 140, 1); /* Slightly darker purple */
+            padding: 10px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 16px;
+            color: white;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 968px) {
+            h1 {
+                text-align: center;
+                margin: 10px 0;
+                font-size: 20px;
+            }
+
+            .container {
+                height: 800px;
+                width: 800;
+            }
+
+            .editor {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            textarea, .output {
+                width: 400px; /* Set width to 400px */
+                height: 400px; /* Reduced height for smaller screens */
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                text-align: center;
+                margin: 10px 0;
+                font-size: 20px;
+            }
+
+            .container {
+                height: 700px;
+                width: 700;
+            }
+
+            .editor {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            textarea, .output {
+                width: 400px; /* Set width to 400px */
+                height: 400px; /* Reduced height for smaller screens */
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Python Code Runner</h1>
+    <div class="container">
+        <div class="buttons">
+            <button class="run" onclick="runPythonCode()">Run Code</button>
+            <button class="clear" onclick="clearText()">Clear</button>
+        </div>
+        <div class="editor">
+            <textarea id="inputCode" placeholder="Write your Python code here..."></textarea>
+            <div id="outputResult" class="output"></div>
+        </div>
+    </div>
+
+    <!-- Pyodide Script -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+    <script>
+        let pyodideReadyPromise = loadPyodide();
+
+        // Load code from URL parameters on page load
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const codeToRun = urlParams.get('code');
+            if (codeToRun) {
+                document.getElementById('inputCode').value = decodeURIComponent(codeToRun);
+            }
+        };
+
+        async function runPythonCode() {
+            const inputCode = document.getElementById('inputCode').value;
+            const outputResult = document.getElementById('outputResult');
+            outputResult.textContent = "Running...";
+
+            try {
+                const pyodide = await pyodideReadyPromise;
+
+                pyodide.runPython(`
+import sys
+from js import console
+
+class StdoutRedirect:
+    def __init__(self):
+        self.output = []
+    def write(self, text):
+        self.output.append(text)
+    def flush(self):
+        pass
+    def get_output(self):
+        return "".join(self.output)
+
+sys.stdout = StdoutRedirect()
+sys.stderr = sys.stdout
+                `);
+
+                pyodide.runPython(inputCode);
+
+                const rawOutput = pyodide.runPython("sys.stdout.get_output()");
+                const formattedOutput = rawOutput.replace(/\n/g, "<br>"); 
+                outputResult.innerHTML = formattedOutput || "Code executed successfully. No output.";
+            } catch (error) {
+                outputResult.textContent = `Error: ${error.message}`;
+            }
+        }
+
+        function clearText() {
+            document.getElementById('inputCode').value = '';
+            document.getElementById('outputResult').innerHTML = '';
+        }
+    </script>
+</body>
+</html>

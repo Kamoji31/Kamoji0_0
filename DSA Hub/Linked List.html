@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DSAHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="CSS/Algorithms.css">
+  </head> 
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="DSAHub.html">
+          <img src="Images/DSAHub Logo.png" alt="" width="150" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="DSAHub.html">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#Courses" role="button" aria-expanded="false">COURSES</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Algorithms.html">Algorithms</a></li>
+                <li><a class="dropdown-item" href="Pseudocode.html">Pseudocode</a></li>
+                <li><a class="dropdown-item" href="Array.html">Array</a></li>
+                <li><a class="dropdown-item" href="Linked List.html">Linked List</a></li>
+                <li><a class="dropdown-item" href="Stacks.html">Stacks</a></li>
+                <li><a class="dropdown-item" href="Queues.html">Queues</a></li>
+                <li><a class="dropdown-item" href="Trees.html">Trees</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Team Members.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="Linked List" class="py-5" style="padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <h2 class="text-left fw-bold" style="color: #333; margin-bottom: 1%;">Linked List</h2>
+            <div class="container d-flex justify-content-between mt-1 mb-4">
+                <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Array.html'">Previous</button>
+                <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Stacks.html'">Next</button>
+            </div>
+            <p class="text-justify" style="color: #555; line-height: 2em; background-color: #a1d3ff; padding: 2%; border-radius: 8px;">A Linked List is a linear data structure where each element (called a node) contains two parts: the data and a reference (or pointer) to the next node in the sequence. Unlike arrays, linked lists do not require contiguous memory allocation, which makes them dynamic in size. This structure is particularly useful for scenarios involving frequent insertions and deletions of elements, as it allows efficient modifications without shifting large amounts of data.</p>
+    
+            <h4 class="fw-bold" style="color: #333; margin-top: 1.5em;">Advantages of Linked Lists</h4>
+            <p style="color: #555;">Linked lists offer several advantages over arrays, particularly when it comes to dynamic data management:</p>
+            <ul style="color: #555; line-height: 2em;">
+                <li><strong>Dynamic Size:</strong> The size of a linked list can grow or shrink at runtime, unlike arrays, which have a fixed size.</li>
+                <li><strong>Efficient Insertions and Deletions:</strong> Adding or removing elements can be done in constant time (O(1)) if the node to be added or removed is known, especially at the beginning or end of the list.</li>
+                <li><strong>No Wasted Space:</strong> Memory is allocated as needed for each node, avoiding the wasted space associated with pre-allocated arrays.</li>
+                <li><strong>Flexibility:</strong> Linked lists are versatile and can be adapted into more complex data structures such as stacks, queues, and graphs.</li>
+            </ul>
+  
+            <h4 class="fw-bold" style="color: #333; margin-top: 1em;">Common Operations on Linked Lists</h4>
+            <p style="color: #555;">Below are the most common operations that can be performed on a linked list:</p>
+            <ul style="color: #555; line-height: 2em; margin-bottom: 2%;">
+                <li><strong>Insertion:</strong> A new node can be added at the beginning, end, or at a specific position in the list.</li>
+                <li><strong>Deletion:</strong> A node can be removed from the beginning, end, or from any specific position within the list.</li>
+                <li><strong>Traversal:</strong> To access each node in the list, traversal is used. It is commonly used to print or process the data in all the nodes.</li>
+                <li><strong>Search:</strong> Searching for a specific value in the list is done by traversing the list node by node until the desired value is found.</li>
+                <li><strong>Reversal:</strong> Reversing a linked list involves reversing the direction of the pointers in all nodes, so the first node becomes the last, and vice versa.</li>
+            </ul>
+  
+            <h4 class="fw-bold" style="color: #333; margin-top: 1em;">Use Cases of Linked Lists</h4>
+            <p style="color: #555;">Linked lists are widely used in various applications, such as:</p>
+            <ul style="color: #555; line-height: 2em; margin-bottom: 3%;">
+                <li><strong>Memory Management:</strong> Operating systems use linked lists to manage memory allocation, particularly in dynamic memory allocation systems.</li>
+                <li><strong>Implementation of Stacks and Queues:</strong> Linked lists are often used to implement stacks and queues due to their efficient insertions and deletions.</li>
+                <li><strong>Real-time Systems:</strong> In systems where the number of elements is constantly changing, linked lists provide an efficient way to manage data.</li>
+                <li><strong>Graph Representations:</strong> Linked lists can be used to represent adjacency lists in graphs, facilitating quick access and efficient space usage.</li>
+            </ul>
+  
+          <h2 class="fw-bold mb-4" style="color: #024ec8;">Types of Linked Lists</h2>
+
+          <h5 class="fw-bold" style="color: #333;">1. Singly Linked List</h5>
+          <p style="color: #555;">A Singly Linked List is a simple structure where each node contains data and a reference to the next node. It only allows traversal in one direction (from the head to the tail).</p>
+          <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; margin-bottom: 1.5em; border-radius: 8px;">
+              <code>
+                  <pre class="singlyLinkedListCode" style="color: #333; font-size: medium; margin-top: 1%; margin-left: 3;">
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Create nodes and link them
+node1 = Node(10)
+node2 = Node(20)
+node1.next = node2  # Link first node to second
+
+# Traverse the list
+current = node1
+while current:
+    print(current.data, end=" -> ")
+    current = current.next
+# Output: 10 -> 20 -> None
+
+                  </pre>
+              </code>
+          </div>
+          
+          <h5 class="fw-bold" style="color: #333;">Output</h5>
+          <div class="output-box fw-bold" style="background-color: #dadada; padding: 20px; margin-top: 1em; border-radius: 8px; color: #333; font-size: 99%; font-family: monospace;">
+              10 -> 20 -> None
+          </div>
+          
+          <h5 class="fw-bold" style="color: #333; margin-top: 2em;">2. Doubly Linked List</h5>
+          <p style="color: #555;">A Doubly Linked List is similar to a Singly Linked List, but each node also contains a reference to the previous node. This allows traversal in both directions.</p>
+          <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; margin-bottom: 1.5em;">
+              <code>
+                  <pre style="color: #333; font-size: medium; margin-top: 1%; margin-left: 3%;" id="doublyLinkedListCode">
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+
+# Create nodes and link them
+node1 = Node(10)
+node2 = Node(20)
+node1.next = node2  # Link first node to second
+node2.prev = node1  # Link second node to first
+
+# Traverse the list forward
+current = node1
+while current:
+    print(current.data, end=" <-> ")
+    current = current.next
+# Output: 10 <-> 20 <-> None
+
+                  </pre>
+              </code>
+          </div>
+          
+          <h5 class="fw-bold" style="color: #333;">Output</h5>
+          <div class="output-box fw-bold" style="background-color: #dadada; padding: 20px; margin-top: 1em; border-radius: 8px; color: #333; font-size: 99%; font-family: monospace;">
+              10 <-> 20 <-> None
+          </div>
+          
+          <h5 class="fw-bold" style="color: #333; margin-top: 2em;">3. Circular Linked List</h5>
+          <p style="color: #555;">In a Circular Linked List, the last node points back to the first node, forming a circle. This can be either a singly or doubly linked structure.</p>
+          
+          <h6 class="fw-bold" style="color: #024ec8; margin-top: 2em; margin-bottom: 1em; font-size: 115%;">A. Singly Circular Linked List</h6>
+          <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; margin-bottom: 1.5em;">
+              <code>
+                  <pre style="color: #333; font-size: medium; margin-top: 1%; margin-left: 3%;" id="singlyCircularLinkedListCode">
+          class Node:
+              def __init__(self, data):
+                  self.data = data
+                  self.next = None
+          
+          # Create nodes and link them in a circle
+          node1 = Node(10)
+          node2 = Node(20)
+          node3 = Node(30)
+          node1.next = node2
+          node2.next = node3
+          node3.next = node1  # Link last node to first node
+          
+          # Traverse the circular list
+          current = node1
+          for _ in range(4):  # Limit to 4 iterations to avoid infinite loop
+              print(current.data, end=" -> ")
+              current = current.next
+          # Output: 10 -> 20 -> 30 -> 10 -> (circular)
+                  </pre>
+              </code>
+          </div>
+          
+          <h5 class="fw-bold" style="color: #333;">Output</h5>
+          <div class="output-box fw-bold" style="background-color: #dadada; padding: 20px; margin-top: 1em; border-radius: 8px; color: #333; font-size: 99%; font-family: monospace;">
+              10 -> 20 -> 30 -> 10 -> (circular)
+          </div>
+          
+          <h6 class="fw-bold" style="color: #024ec8;  margin-top: 2em; margin-bottom: 1em; font-size: 115%;">B. Doubly Circular Linked List</h6>
+          <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; margin-bottom: 1.5em;">
+              <code>
+                  <pre style="color: #333; font-size: medium; margin-top: 1%; margin-left: 3%;" id="doublyCircularLinkedListCode">
+          class Node:
+              def __init__(self, data):
+                  self.data = data
+                  self.next = None
+                  self.prev = None
+          
+          # Create nodes and link them in a circle
+          node1 = Node(10)
+          node2 = Node(20)
+          node3 = Node(30)
+          node1.next = node2
+          node2.next = node3
+          node3.next = node1  # Link last node to first node
+          node2.prev = node1
+          node3.prev = node2
+          node1.prev = node3  # Link first node to last node
+          
+          # Traverse the circular list forward
+          current = node1
+          for _ in range(4):  # Limit to 4 iterations to avoid infinite loop
+              print(current.data, end=" <-> ")
+              current = current.next
+          # Output: 10 <-> 20 <-> 30 <-> 10 <-> (circular)
+                  </pre>
+              </code>
+          </div>
+          
+          <h5 class="fw-bold" style="color: #333;">Output</h5>
+<div class="output-box fw-bold" style="background-color: #dadada; padding: 20px; margin-top: 1em; border-radius: 8px; color: #333; font-size: 99%; font-family: monospace;">
+    10 <-> 20 <-> 30 <-> 10 <-> (circular)
+</div>
+
+<div class="container d-flex justify-content-between mt-5">
+    <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Array.html'">Previous</button>
+    <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Stacks.html'">Next</button>
+</div>
+</section>
+          
+<footer class="bg-light text-dark pt-5"  id="Contact">
+  <div class="container px-5">
+      <div class="row">
+          <div class="col-6 col-lg-4">
+              <h3 class="fw-bold">DSA Hub</h3>
+              <p class="pt-2">321, McArthur Highway, Binalonan,
+                <br>Pangasinan</p>
+              <p class="mb-2">09096453661</p>
+              <p>09273345635</p>
+          </div>
+          <div class="col">
+              <h4>Menu</h4>
+              <ul class="list-unstyled pt-2">
+                <li class="py-1"><a href="DSAHub.html">Home</a></li>
+                <li class="py-1"><a href="DSAHub.html">Courses</a></li>
+                <li class="py-1"><a href="Team Members.html">About Us</a></li>
+              </ul>
+          </div>
+          <div class="col">
+            <h4>Courses</h4>
+            <ul class="list-unstyled pt-2">
+                <li class="py-1"><a href="Algorithms.html">Algorithms</a></li>
+                <li class="py-1"><a href="Pseudocode.html">Pseudocode</a></li>
+                <li class="py-1"><a href="Array.html">Array</a></li>
+                <li class="py-1"><a href="LinkedList.html">Linked List</a></li>
+                <li class="py-1"><a href="Stacks.html">Stacks</a></li>
+                <li class="py-1"><a href="Queues.html">Queues</a></li>
+                <li class="py-1"><a href="Trees.html">Trees</a></li>
+            </ul>
+        </div>
+          <div class="col-6 col-lg-3 text-lg-end">
+              <h4>Social Media Links</h4>
+              <div class="social-media pt-2">
+                  <a href="#" class="text-dark fs-2 me-3"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#" class="text-dark fs-2 me-3"><i class="fa-brands fa-pinterest"></i></a>
+                  <a href="#" class="text-dark fs-2 me-3"><i class="fa-brands fa-square-instagram"></i></a>
+                  <a href="#" class="text-dark fs-2"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+          </div>
+      </div>
+      <hr>
+      <div class="d-sm-flex justify-content-between py-1">
+          <p>2024 © DSAHub. All Rights Reserved. </p>
+          <p>
+              <a href="#" class="text-dark text-decoration-none pe-4">Terms of use</a>
+              <a href="#" class="text-dark text-decoration-none"> Privacy policy</a>
+          </p>
+      </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

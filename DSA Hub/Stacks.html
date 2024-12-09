@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DSAHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="CSS/Algorithms.css">
+  </head> 
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="DSAHub.html">
+          <img src="Images/DSAHub Logo.png" alt="" width="150" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="DSAHub.html">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#Courses" role="button" aria-expanded="false">COURSES</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Algorithms.html">Algorithms</a></li>
+                <li><a class="dropdown-item" href="Pseudocode.html">Pseudocode</a></li>
+                <li><a class="dropdown-item" href="Array.html">Array</a></li>
+                <li><a class="dropdown-item" href="Linked List.html">Linked List</a></li>
+                <li><a class="dropdown-item" href="Stacks.html">Stacks</a></li>
+                <li><a class="dropdown-item" href="Queues.html">Queues</a></li>
+                <li><a class="dropdown-item" href="Trees.html">Trees</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Team Members.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="Stacks" class="py-5" style="padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <h2 class="text-left fw-bold" style="color: #333; margin-bottom: 1%;">Stacks</h2>
+            <div class="container d-flex justify-content-between mt-1 mb-4">
+                <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Linked List.html'">Previous</button>
+                <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Queues.html'">Next</button>
+            </div>
+            <p class="text-justify" style="color: #333; line-height: 2em; background-color: #a1d3ff; padding: 2%; border-radius: 8px;">
+                A Stack is a linear data structure that follows the <b>Last In, First Out (LIFO)</b> principle. In a stack, the last element inserted is the first one to be removed. Think of a stack of plates: the plate added last will be the first one to be taken off. Stacks are widely used in scenarios like managing function calls, undo operations, and parsing expressions in programming languages.
+            </p>
+    
+            <h4 class="fw-bold" style="color: #333; margin-top: 1.5em;">Advantages of Stacks</h4>
+            <p style="color: #555;">Stacks offer several benefits in solving specific types of problems:</p>
+            <ul style="color: #555; line-height: 2em;">
+                <li><strong>Efficient Operations:</strong> Both push (adding) and pop (removing) operations are executed in constant time (O(1)), making stacks efficient for scenarios with frequent additions and removals of data.</li>
+                <li><strong>Memory Management:</strong> Stacks are used in many algorithms to store temporary data such as during recursive calls or function execution, reducing the complexity of memory management.</li>
+                <li><strong>Simple Data Structure:</strong> The stack follows a straightforward model and is easy to implement, making it an ideal structure for managing data in various algorithms.</li>
+                <li><strong>Useful for Recursion:</strong> Stacks are essential for managing the flow of recursive function calls in programs.</li>
+            </ul>
+    
+            <h4 class="fw-bold" style="color: #333; margin-top: 1em;">Common Operations on Stacks</h4>
+            <p style="color: #555;">The following operations can be performed on stacks:</p>
+            <ul style="color: #555; line-height: 2em; margin-bottom: 2%;">
+                <li><strong>Push:</strong> Adds an item to the top of the stack.</li>
+                <li><strong>Pop:</strong> Removes the top item from the stack.</li>
+                <li><strong>Peek (Top):</strong> Returns the top item without removing it from the stack.</li>
+                <li><strong>isEmpty:</strong> Checks whether the stack is empty.</li>
+                <li><strong>Size:</strong> Returns the number of items currently in the stack.</li>
+            </ul>
+    
+            <h4 class="fw-bold" style="color: #333;">Real-World Use Cases of Stacks</h4>
+            <p style="color: #555;">Stacks are used in several practical applications in computer science:</p>
+            <ul style="color: #555; line-height: 2em; margin-bottom: 2em;">
+                <li><strong>Function Calls:</strong> Stacks are used to store the state of each function call in programming languages, enabling the program to return to the correct point after a function call finishes.</li>
+                <li><strong>Undo Mechanism:</strong> In text editors or graphics software, stacks store the history of changes, allowing users to undo or redo actions in reverse order.</li>
+                <li><strong>Expression Evaluation:</strong> Stacks are used in algorithms for parsing and evaluating mathematical expressions, especially for converting between infix, postfix, and prefix notation.</li>
+                <li><strong>Browser History:</strong> Web browsers often use stacks to manage the history of visited pages, so users can navigate forward and backward through pages efficiently.</li>
+            </ul>
+    
+
+                    <h3 class="fw-bold mb-4" style="color: #024ec8;">Stacks - Infix, Prefix, and Postfix Expressions</h3>
+            
+                    <h5 class="fw-bold" style="color: #333;">1. Infix Expression</h5>
+                    <p style="color: #555;">An Infix expression is a common way of writing mathematical expressions, where the operator is placed between the operands. For example, in the expression `A + B`, `+` is the operator and `A` and `B` are the operands. Infix notation is easy for humans to read but can be less efficient for computation.</p>
+            
+                    <h6 class="fw-bold" style="color: #024ec8; margin-bottom: 1em; font-size: 115%;">Example:</h6>
+                    <div class="bg-gray-200" style="background-color: #dadada; margin-bottom: 1.5em; border-radius: 8px;">
+                        <code>
+                            <pre style="color: #333; font-size: medium; margin-top: 1%; padding: 1%;" id="infixExampleCode">
+            # Infix Expression: A + B * C
+                            </pre>
+                        </code>
+                    </div>
+            
+                    <h5 class="fw-bold" style="color: #333; margin-top: 2em;">2. Prefix Expression</h5>
+                    <p style="color: #555;">A Prefix expression (also known as Polish notation) places the operator before the operands. For example, the Prefix equivalent of `A + B * C` is `+ A * B C`. This notation eliminates the need for parentheses to denote precedence of operations, making it easier for a machine to evaluate.</p>
+            
+                    <h6 class="fw-bold" style="color: #024ec8; margin-bottom: 1em; font-size: 115%;">Example:</h6>
+                    <div class="bg-gray-200" style="background-color: #dadada; margin-bottom: 1.5em; border-radius: 8px;">
+                        <code>
+                            <pre style="color: #333; font-size: medium; margin-top: 1%; padding: 1%;" id="prefixExampleCode">
+            # Prefix Expression: + A * B C
+                            </pre>
+                        </code>
+                    </div>
+            
+                    <h5 class="fw-bold" style="color: #333; margin-top: 2em;">3. Postfix Expression</h5>
+                    <p style="color: #555;">A Postfix expression (also known as Reverse Polish notation) places the operator after the operands. For example, the Postfix equivalent of `A + B * C` is `A B C * +`. This notation is also advantageous for machine evaluation since no parentheses are required and operators are applied in the order they appear.</p>
+            
+                    <h6 class="fw-bold" style="color: #024ec8; margin-bottom: 1em; font-size: 115%;">Example:</h6>
+                    <div class="bg-gray-200" style="background-color: #dadada; margin-bottom: 1.5em; border-radius: 8px;">
+                        <code>
+                            <pre style="color: #333; font-size: medium; margin-top: 1%; padding: 1%;" id="postfixExampleCode">
+            # Postfix Expression: A B C * +
+                            </pre>
+                        </code>
+                    </div>
+            
+                    <h3 class="fw-bold" style="color: #333; margin-top: 2em;">Converting Infix to Prefix and Postfix Using Stack</h3>
+                    <p style="color: #555;">Stacks play a crucial role in converting Infix expressions to Prefix or Postfix. Below are the steps for conversion:</p>
+            
+                    <h5 class="fw-bold" style="color: #024ec8; margin-top: 1em;">Infix to Postfix Conversion</h5>
+                    <ol style="color: #555; line-height: 2em;">
+                        <li>Read the infix expression from left to right.</li>
+                        <li>If the character is an operand (number/variable), add it directly to the output.</li>
+                        <li>If the character is an operator, pop operators from the stack to the output until an operator of lower precedence or a left parenthesis is found. Then push the current operator onto the stack.</li>
+                        <li>If the character is a left parenthesis, push it onto the stack.</li>
+                        <li>If the character is a right parenthesis, pop operators from the stack to the output until a left parenthesis is encountered. Pop the left parenthesis but do not add it to the output.</li>
+                        <li>Once the expression has been fully read, pop all remaining operators from the stack to the output.</li>
+                    </ol>
+            
+                    <h5 class="fw-bold mb-4" style="color: #333;">Example:</h5>
+                    <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; margin-bottom: 1.5em; border-radius: 8px;">
+                        <code>
+                            <pre style="color: #333; font-size: medium; margin-top: 1%;" id="infixToPostfixCode">
+            # Infix to Postfix Conversion using Stack
+            
+            class Stack:
+                def __init__(self):
+                    self.stack = []
+                    
+                def is_empty(self):
+                    return len(self.stack) == 0
+                
+                def peek(self):
+                    return self.stack[-1]
+                
+                def pop(self):
+                    if not self.is_empty():
+                        return self.stack.pop()
+                
+                def push(self, item):
+                    self.stack.append(item)
+            
+            # Operator precedence
+            def precedence(op):
+                if op == '+' or op == '-':
+                    return 1
+                if op == '*' or op == '/':
+                    return 2
+                return 0
+            
+            # Infix to Postfix Conversion
+            def infix_to_postfix(expression):
+                stack = Stack()
+                output = []
+                for char in expression:
+                    if char.isalnum():  # Operand
+                        output.append(char)
+                    elif char == '(':  # Left Parenthesis
+                        stack.push(char)
+                    elif char == ')':  # Right Parenthesis
+                        while stack.peek() != '(':
+                            output.append(stack.pop())
+                        stack.pop()  # Remove '('
+                    else:  # Operator
+                        while (not stack.is_empty() and precedence(stack.peek()) >= precedence(char)):
+                            output.append(stack.pop())
+                        stack.push(char)
+                
+                while not stack.is_empty():
+                    output.append(stack.pop())
+                    
+                return ''.join(output)
+            
+            # Example usage
+            expression = "A+B*(C-D)"
+            postfix = infix_to_postfix(expression)
+            print("Postfix Expression:", postfix)
+                            </pre>
+                        </code>
+                    </div>
+            
+                    <h5 class="fw-bold" style="color: #333;">Output</h5>
+                    <div class="output-box fw-bold" style="background-color: #dadada; padding: 20px; margin-top: 1em; border-radius: 8px; color: #333; font-size: 99%; font-family: monospace;">
+                        Postfix Expression: ABD-C*+
+                    </div>
+            
+                    <h5 class="fw-bold" style="color: #333; margin-top: 2em; color: #024ec8;">Infix to Prefix Conversion</h5>
+                    <p style="color: #555;">To convert an Infix expression to Prefix, we follow similar steps as Infix to Postfix but with reversed operations. After obtaining the postfix expression, we can reverse it to get the prefix expression.</p>
+            
+                    <h5 class="fw-bold" style="color: #333;">Prefix Evaluation Using Stack</h5>
+                    <p style="color: #555;">Once you have a Prefix expression, you can evaluate it using a stack by following these steps:</p>
+                    <ol style="color: #555; line-height: 2em;">
+                        <li>Read the prefix expression from right to left.</li>
+                        <li>If the character is an operand, push it onto the stack.</li>
+                        <li>If the character is an operator, pop two operands from the stack, apply the operator, and push the result back onto the stack.</li>
+                        <li>After reading the entire expression, the final result will be the single value remaining in the stack.</li>
+                    </ol>
+            
+                    <h5 class="fw-bold" style="color: #333;">Postfix Evaluation Using Stack</h5>
+                    <p style="color: #555;">To evaluate a Postfix expression, you can follow the steps below:</p>
+                    <ol style="color: #555; line-height: 2em;">
+                        <li>Read the postfix expression from left to right.</li>
+                        <li>If the character is an operand, push it onto the stack.</li>
+                        <li>If the character is an operator, pop two operands from the stack, apply the operator to the operands, and push the result back onto the stack.</li>
+                        <li>Continue this process until all characters of the postfix expression have been processed.</li>
+                        <li>At the end of the evaluation, the stack will contain a single element, which is the result of the postfix expression.</li>
+                    </ol>
+            
+                    <h5 class="fw-bold mb-4" style="color: #333;">Example:</h5>
+                    <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; margin-bottom: 1.5em; border-radius: 8px;">
+                        <code>
+                            <pre style="color: #333; font-size: medium; margin-top: 1%;" id="postfixEvaluationCode">
+            # Postfix Evaluation using Stack
+            
+            class Stack:
+                def __init__(self):
+                    self.stack = []
+                
+                def is_empty(self):
+                    return len(self.stack) == 0
+                
+                def pop(self):
+                    if not self.is_empty():
+                        return self.stack.pop()
+                
+                def push(self, item):
+                    self.stack.append(item)
+            
+            def evaluate_postfix(expression):
+                stack = Stack()
+                
+                for char in expression:
+                    if char.isdigit():  # If the character is a digit (operand)
+                        stack.push(int(char))
+                    else:  # If the character is an operator
+                        operand2 = stack.pop()
+                        operand1 = stack.pop()
+                        
+                        if char == '+':
+                            result = operand1 + operand2
+                        elif char == '-':
+                            result = operand1 - operand2
+                        elif char == '*':
+                            result = operand1 * operand2
+                        elif char == '/':
+                            result = operand1 / operand2
+                        
+                        stack.push(result)
+                
+                return stack.pop()  # The final result will be the only element left in the stack
+            
+            # Example usage
+            expression = "23*5+"
+            result = evaluate_postfix(expression)
+            print("Postfix Evaluation Result:", result)
+                            </pre>
+                        </code>
+                    </div>
+            
+                    <h5 class="fw-bold" style="color: #333;">Output</h5>
+                    <div class="output-box fw-bold" style="background-color: #dadada; padding: 20px; margin-top: 1em; border-radius: 8px; color: #333; font-size: 99%; font-family: monospace;">
+                        Postfix Evaluation Result: 11
+                    </div>
+            
+                    <p style="color: #555; margin-top: 1em;">In the example above, the expression "23*5+" is evaluated as follows:</p>
+                    <ul style="color: #555; line-height: 2em;">
+                        <li>First, 2 and 3 are pushed onto the stack.</li>
+                        <li>The '*' operator is encountered, so 2 and 3 are popped from the stack, multiplied (2 * 3 = 6), and the result (6) is pushed back onto the stack.</li>
+                        <li>Next, 5 is pushed onto the stack.</li>
+                        <li>The '+' operator is encountered, so 6 and 5 are popped from the stack, added (6 + 5 = 11), and the result (11) is pushed back onto the stack.</li>
+                        <li>At the end, the stack contains the result 11, which is the final result of the postfix expression.</li>
+                    </ul>
+            
+                    <div class="container d-flex justify-content-between mt-5">
+                        <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Linked List.html'">Previous</button>
+                        <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Queues.html'">Next</button>
+                    </div>
+                </div>
+            </section>
+            
+        
+          
+<footer class="bg-light text-dark pt-5"  id="Contact">
+  <div class="container px-5">
+      <div class="row">
+          <div class="col-6 col-lg-4">
+              <h3 class="fw-bold">DSA Hub</h3>
+              <p class="pt-2">321, McArthur Highway, Binalonan,
+                <br>Pangasinan</p>
+              <p class="mb-2">09096453661</p>
+              <p>09273345635</p>
+          </div>
+          <div class="col">
+              <h4>Menu</h4>
+              <ul class="list-unstyled pt-2">
+                <li class="py-1"><a href="DSAHub.html">Home</a></li>
+                <li class="py-1"><a href="DSAHub.html">Courses</a></li>
+                <li class="py-1"><a href="Team Members.html">About Us</a></li>
+              </ul>
+          </div>
+          <div class="col">
+            <h4>Courses</h4>
+            <ul class="list-unstyled pt-2">
+                <li class="py-1"><a href="Algorithms.html">Algorithms</a></li>
+                <li class="py-1"><a href="Pseudocode.html">Pseudocode</a></li>
+                <li class="py-1"><a href="Array.html">Array</a></li>
+                <li class="py-1"><a href="LinkedList.html">Linked List</a></li>
+                <li class="py-1"><a href="Stacks.html">Stacks</a></li>
+                <li class="py-1"><a href="Queues.html">Queues</a></li>
+                <li class="py-1"><a href="Trees.html">Trees</a></li>
+            </ul>
+        </div>
+          <div class="col-6 col-lg-3 text-lg-end">
+              <h4>Social Media Links</h4>
+              <div class="social-media pt-2">
+                  <a href="#" class="text-dark fs-2 me-3"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#" class="text-dark fs-2 me-3"><i class="fa-brands fa-pinterest"></i></a>
+                  <a href="#" class="text-dark fs-2 me-3"><i class="fa-brands fa-square-instagram"></i></a>
+                  <a href="#" class="text-dark fs-2"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+          </div>
+      </div>
+      <hr>
+      <div class="d-sm-flex justify-content-between py-1">
+          <p>2024 © DSAHub. All Rights Reserved. </p>
+          <p>
+              <a href="#" class="text-dark text-decoration-none pe-4">Terms of use</a>
+              <a href="#" class="text-dark text-decoration-none"> Privacy policy</a>
+          </p>
+      </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

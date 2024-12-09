@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DSAHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="CSS/Algorithms.css">
+  </head> 
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="DSAHub.html">
+          <img src="Images/DSAHub Logo.png" alt="" width="150" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="DSAHub.html">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#Courses" role="button" aria-expanded="false">COURSES</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Algorithms.html">Algorithms</a></li>
+                <li><a class="dropdown-item" href="Pseudocode.html">Pseudocode</a></li>
+                <li><a class="dropdown-item" href="Array.html">Array</a></li>
+                <li><a class="dropdown-item" href="Linked List.html">Linked List</a></li>
+                <li><a class="dropdown-item" href="Stacks.html">Stacks</a></li>
+                <li><a class="dropdown-item" href="Queues.html">Queues</a></li>
+                <li><a class="dropdown-item" href="Trees.html">Trees</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Team Members.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="Pseudocode" class="py-5" style="padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <h2 class="text-left fw-bold" style="color: #333; margin-bottom: 1%;">Pseudocode</h2>
+            <div class="container d-flex justify-content-between mt-1 mb-4">
+              <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Algorithms.html'">Previous</button>
+              <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Array.html'">Next</button>
+          </div>
+            <p class="text-justify" style="color: #333; line-height: 2em; background-color: #a1d3ff; padding: 2%;  border-radius: 8px;">Pseudocode is a method of representing an algorithm using a combination of natural language and programming language constructs. It helps in planning out the structure of an algorithm before converting it into actual code. Pseudocode is a great way to present the steps of an algorithm without getting into the syntax of any specific programming language.</p>
+            
+            <h4 class="fw-bold" style="color: #333; margin-top: 1.5em;">Importance of Pseudocode</h4>
+            <p style="color: #555;">Pseudocode is crucial for several reasons:</p>
+            <ul style="color: #555; line-height: 2em;">
+                <li><strong>Clarity:</strong> Pseudocode provides a clear and easy-to-understand representation of an algorithm without the distraction of programming syntax.</li>
+                <li><strong>Language-Independent:</strong> It allows developers to focus on the logic of the problem-solving process without worrying about the specifics of a programming language.</li>
+                <li><strong>Easy to Translate:</strong> Pseudocode can be easily converted into actual code in any programming language.</li>
+                <li><strong>Problem Solving:</strong> It enables a structured approach to solving problems, making it easier to break down complex tasks into smaller, manageable steps.</li>
+            </ul>
+        
+            <h4 class="fw-bold" style="color: #333; margin-top: 1em;">Common Practices in Writing Pseudocode</h4>
+            <ul style="color: #555; line-height: 2em;">
+                <li><strong>Clear and Concise:</strong> Keep the pseudocode as simple and clear as possible to ensure that the logic is easy to follow.</li>
+                <li><strong>Use Simple Language:</strong> Pseudocode is typically written in simple, natural language that anyone can understand.</li>
+                <li><strong>Consistent Indentation:</strong> Proper indentation should be used to represent the structure of the algorithm, such as loops and conditionals.</li>
+                <li><strong>Avoid Programming Syntax:</strong> Focus on the logic rather than the specific syntax of a programming language.</li>
+            </ul>
+    
+            <h4 class="fw-bold mb-3" style="color: #333; margin-top: 1em;">Creating Pseudocode</h4>
+            <p class="mb-3">
+                Pseudocode allows you to outline the logic of an algorithm without worrying about syntax. The steps involved in creating pseudocode are simple:
+            </p>
+            <ul class="list-disc list-inside mb-3" style="line-height: 2em;">
+                <li>Write steps using simple language to describe what the algorithm is doing.</li>
+                <li>Use basic constructs like loops (for, while), conditions (if, else), and functions to organize the flow.</li>
+                <li>Ensure the pseudocode is readable and easy to understand.</li>
+                <li>Provide a clear starting and stopping point for the pseudocode.</li>
+            </ul>
+            <h4 class="text-left fw-bold" style="color: #333;">Python Implementation</h4>
+                    <p class="mb-4" style="font-size: 120%; margin-top: 2%;"><span class="fw-bold">Example 1:</span> Find the maximum of two numbers:</p>
+                    <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada;  border-radius: 8px;">
+                        <code>
+                            <pre style="color: #333; font-size: medium; margin-top: 1%;">
+            a = 5
+            b = 10
+            
+            max_value = a if a > b else b
+            
+            print(max_value)  # Output will be 10
+                            </pre>
+                        </code>
+                    </div>
+            
+                    <p class="mb-4" style="font-size: 120%; margin-top: 2%;"><span class="fw-bold">Example 2:</span> Calculate the factorial of a number:</p>
+                    <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; border-radius: 8px;">
+                        <code>
+                            <pre style="color: #333; font-size: medium; margin-top: 1%;">
+            n = 5
+            factorial = 1
+            
+            for i in range(1, n+1):
+                factorial *= i
+            
+            print(factorial)  # Output will be 120
+                            </pre>
+                        </code>
+                    </div>
+            
+                    <p class="mb-4" style="font-size: 120%; margin-top: 2%;"><span class="fw-bold">Example 3:</span> Check if a number is prime:</p>
+                    <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada; border-radius: 8px;">
+                        <code>
+                            <pre style="color: #333; font-size: medium; margin-top: 1%;">
+            n = 11
+            is_prime = True
+            
+            for i in range(2, int(n**0.5) + 1):
+                if n % i == 0:
+                    is_prime = False
+                    break
+            
+            if is_prime:
+                print(f"{n} is prime")
+            else:
+                print(f"{n} is not prime")
+                            </pre>
+                        </code>
+                    </div>
+            
+                    <p class="mb-4" style="font-size: 120%; margin-top: 2%;"><span class="fw-bold">Example 4:</span> Reverse a string:</p>
+                    <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada;  border-radius: 8px;">
+                        <code>
+                            <pre style="color: #333; font-size: medium; margin-top: 1%;">
+            str = "hello"
+            reversed_str = ""
+            
+            for char in str:
+                reversed_str = char + reversed_str
+            
+            print(reversed_str)  # Output will be "olleh"
+                            </pre>
+                        </code>
+                    </div>
+            
+                    <p class="mb-4" style="font-size: 120%; margin-top: 2%;"><span class="fw-bold">Example 5:</span> Find the largest number in a list:</p>
+                    <div class="bg-gray-200 p-4 rounded-lg" style="background-color: #dadada;  border-radius: 8px;">
+                        <code>
+                            <pre style="color: #333; font-size: medium; margin-top: 1%;">
+            numbers = [1, 5, 3, 9, 2]
+            largest = numbers[0]
+            
+            for num in numbers:
+                if num > largest:
+                    largest = num
+            
+            print(largest)  # Output will be 9
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="container d-flex justify-content-between mt-5">
+                    <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Algorithms.html'">Previous</button>
+                    <button class="btn btn-primary" style="width: 8%;" onclick="window.location.href='Array.html'">Next</button>
+                </div>
+
+            </section>
+
+            
+    
+<footer class="bg-light text-dark pt-5"  id="Contact">
+  <div class="container px-5">
+      <div class="row">
+          <div class="col-6 col-lg-4">
+              <h3 class="fw-bold">DSA Hub</h3>
+              <p class="pt-2">321, McArthur Highway, Binalonan,
+                <br>Pangasinan</p>
+              <p class="mb-2">09096453661</p>
+              <p>09273345635</p>
+          </div>
+          <div class="col">
+              <h4>Menu</h4>
+              <ul class="list-unstyled pt-2">
+                <li class="py-1"><a href="DSAHub.html">Home</a></li>
+                <li class="py-1"><a href="DSAHub.html">Courses</a></li>
+                <li class="py-1"><a href="Team Members.html">About Us</a></li>
+              </ul>
+          </div>
+          <div class="col">
+            <h4>Courses</h4>
+            <ul class="list-unstyled pt-2">
+                <li class="py-1"><a href="Algorithms.html">Algorithms</a></li>
+                <li class="py-1"><a href="Pseudocode.html">Pseudocode</a></li>
+                <li class="py-1"><a href="Array.html">Array</a></li>
+                <li class="py-1"><a href="Linked List.html">Linked List</a></li>
+                <li class="py-1"><a href="Stacks.html">Stacks</a></li>
+                <li class="py-1"><a href="Queues.html">Queues</a></li>
+                <li class="py-1"><a href="Trees.html">Trees</a></li>
+            </ul>
+        </div>
+          <div class="col-6 col-lg-3 text-lg-end">
+              <h4>Social Media Links</h4>
+              <div class="social-media pt-2">
+                  <a href="#" class="text-dark fs-2 me-3"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#" class="text-dark fs-2 me-3"><i class="fa-brands fa-pinterest"></i></a>
+                  <a href="#" class="text-dark fs-2 me-3"><i class="fa-brands fa-square-instagram"></i></a>
+                  <a href="#" class="text-dark fs-2"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+          </div>
+      </div>
+      <hr>
+      <div class="d-sm-flex justify-content-between py-1">
+          <p>2024 © DSAHub. All Rights Reserved. </p>
+          <p>
+              <a href="#" class="text-dark text-decoration-none pe-4">Terms of use</a>
+              <a href="#" class="text-dark text-decoration-none"> Privacy policy</a>
+          </p>
+      </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
